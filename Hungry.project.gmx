@@ -7,14 +7,28 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_blockaide</sprite>
+    <sprite>sprites\spr_roomchange</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_player</object>
+    <object>objects\obj_blockaide</object>
+    <objects name="player">
+      <object>objects\obj_player</object>
+    </objects>
+    <objects name="triggers">
+      <object>objects\obj_leaveRoom</object>
+      <object>objects\obj_tocabin</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <rooms name="cabin">
+      <room>rooms\rm_cabin</room>
+      <room>rooms\rm_outside</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
