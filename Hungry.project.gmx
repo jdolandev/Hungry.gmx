@@ -10,6 +10,9 @@
     <sprite>sprites\spr_friend</sprite>
     <sprite>sprites\spr_blockaide</sprite>
     <sprite>sprites\spr_roomchange</sprite>
+    <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_yes</sprite>
+    <sprite>sprites\spr_no</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -33,6 +36,9 @@
     </objects>
     <object>objects\obj_friend</object>
     <object>objects\obj_outside</object>
+    <object>objects\obj_cursor</object>
+    <object>objects\obj_yes</object>
+    <object>objects\obj_no</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">
@@ -42,6 +48,7 @@
     <rooms name="q1">
       <room>rooms\q1_11</room>
     </rooms>
+    <room>rooms\rm_choice</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

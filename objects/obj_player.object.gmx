@@ -32,6 +32,7 @@
 */
 
 moveSpeed = 2.0;
+instance_create(0, 0, obj_cursor);
 </string>
           </argument>
         </arguments>
