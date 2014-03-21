@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_friend</sprite>
     <sprite>sprites\spr_blockaide</sprite>
     <sprite>sprites\spr_roomchange</sprite>
   </sprites>
@@ -14,6 +15,13 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\dist2d.gml</script>
+    <script>scripts\convo_leave.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\gfont</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_blockaide</object>
     <objects name="player">
@@ -23,11 +31,16 @@
       <object>objects\obj_leaveRoom</object>
       <object>objects\obj_tocabin</object>
     </objects>
+    <object>objects\obj_friend</object>
+    <object>objects\obj_outside</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">
       <room>rooms\rm_cabin</room>
       <room>rooms\rm_outside</room>
+    </rooms>
+    <rooms name="q1">
+      <room>rooms\q1_11</room>
     </rooms>
   </rooms>
   <help>
