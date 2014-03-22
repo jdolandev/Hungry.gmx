@@ -34,7 +34,9 @@
 image_speed = 0;
 
 playable = true;
+player_move = true;
 moveSpeed = 2.0;
+moving = false;
 instance_create(0, 0, obj_cursor);
 </string>
           </argument>
@@ -92,17 +94,20 @@ k_right = ord('D');
             <kind>1</kind>
             <string>if( playable ){
     visible = true;
-    if( keyboard_check( k_left )){
-        x -= moveSpeed;
-    }
-    else if( keyboard_check( k_right )){
-        x += moveSpeed;
-    }
-    if( keyboard_check( k_up )){
-        y -= moveSpeed;
-    }
-    else if( keyboard_check( k_down )){
-        y += moveSpeed;
+    if (player_move)
+    {
+        if( keyboard_check( k_left )){
+            x -= moveSpeed;
+        }
+        else if( keyboard_check( k_right )){
+            x += moveSpeed;
+        }
+        if( keyboard_check( k_up )){
+            y -= moveSpeed;
+        }
+        else if( keyboard_check( k_down )){
+            y += moveSpeed;
+        }
     }
 }
 else{
@@ -133,9 +138,22 @@ if( keyboard_check_pressed( vk_escape )){
           <argument>
             <kind>1</kind>
             <string>if( keyboard_check( vk_shift )){
-    if( mouse_check_button_pressed( mb_left )){
-        instance_create(x,y,obj_bullet);
+    player_move=false;
+    if( !instance_exists(obj_aiming)){
+        instance_create(x+12,y+12,obj_aiming)
     }
+} 
+else if (keyboard_check_released( vk_shift ))
+{
+    if ( instance_exists (obj_aiming))
+    {
+        with (obj_aiming)
+        {
+            instance_destroy();
+        }
+    }
+    
+    player_move=true;   
 }
 </string>
           </argument>
@@ -160,11 +178,18 @@ if( keyboard_check_pressed( vk_escape )){
             <string>if( keyboard_check( k_down )){
     if( !keyboard_check( k_left ) &amp;&amp; !keyboard_check( k_right )){
         sprite_index = spr_playerD;
-        image_speed = 0.25;
+        
+        if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     }
     else if( keyboard_check( k_left )){
         sprite_index = spr_playerLD;
-        image_speed = 0.25;
+        if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     }
     else if( keyboard_check( k_right )){
         sprite_index = spr_playerDR;
@@ -173,28 +198,52 @@ if( keyboard_check_pressed( vk_escape )){
 }
 else if( !keyboard_check( k_down ) &amp;&amp; keyboard_check( k_left )){
     sprite_index = spr_playerL;
-    image_speed = 0.25;
+    if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     moving = true;
 }
 else if( !keyboard_check( k_down ) &amp;&amp; keyboard_check( k_right )){
     sprite_index = spr_playerR;
-    image_speed = 0.25;
+    if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     moving = true;
 }
+
 if( keyboard_check( k_up )){
     if( !keyboard_check( k_left ) &amp;&amp; !keyboard_check( k_right)){
         sprite_index = spr_playerU;
-        image_speed = 0.25;
+        if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     }
     else if( keyboard_check( k_left )){
         sprite_index = spr_playerUL;
-        image_speed = 0.25;
+        if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     }
     else if( keyboard_check( k_right )){
         sprite_index = spr_playerUR;
-        image_speed = 0.25;
+        if (keyboard_check(vk_lshift))
+        {
+            image_speed = 0;
+        }
     }
     moving = true;
+}
+
+if( moving ){
+    image_speed = 0.25;
+}
+else if( !moving ){
+    image_speed = 0;
+    image_index = 0;
 }
 //If you're not pressing any god damn keys
 if( !keyboard_check( k_up ) &amp;&amp; !keyboard_check( k_down ) &amp;&amp;

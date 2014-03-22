@@ -202,7 +202,8 @@
     <instance objName="obj_blockaide" x="336" y="112" name="inst_5E954F85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blockaide" x="336" y="128" name="inst_35962C2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_blockaide" x="336" y="144" name="inst_3D95D8F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_darkness" x="256" y="224" name="inst_F18F0682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_darkness" x="240" y="224" name="inst_F18F0682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rabbit" x="224" y="304" name="inst_716EA860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background2" x="176" y="112" w="176" h="96" xo="0" yo="0" id="10001379" name="inst_DA35048D" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

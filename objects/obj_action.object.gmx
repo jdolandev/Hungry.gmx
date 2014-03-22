@@ -69,8 +69,10 @@
           <argument>
             <kind>1</kind>
             <string>hits=0;
+fuckups = 0;
 hitsNeeded=4;
 hasKilled=false;
+fuckupsallowed=3;
 </string>
           </argument>
         </arguments>
@@ -97,17 +99,23 @@ hasKilled=false;
 {
     if (keyboard_check_pressed(k_action))
     {
-        if (hits&lt;hitsNeeded)
-        {
-            hits++;
-            //Set player animation to close prod/skin here
+        if( !instance_exists(obj_zone)){
+            instance_create(x - 64, y - 32, obj_zone);
         }
-        else
         if (hits&gt;=hitsNeeded)
         {
             global.locker += 1;
             hasKilled=true;
             global.meatGained= global.meatGained+1;
+            with( obj_zone ){
+                instance_destroy();
+            }
+            instance_destroy();
+        }
+        else if( fuckups &gt;= fuckupsallowed){
+            with( obj_zone ){
+                instance_destroy();
+            }
             instance_destroy();
         }
     }

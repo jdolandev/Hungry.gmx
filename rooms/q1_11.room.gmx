@@ -31,7 +31,9 @@ obj_player.playable = true;
 for( i = 0; i &lt; global.q1; i++){
     instance_create( irandom_range(128, room_width - 128), irandom_range(128, room_height - 128), obj_rabbit);
 }
-instance_create(0,0,obj_focus);</code>
+instance_create(0,0,obj_focus);
+
+obj_player.image_speed = 0;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>

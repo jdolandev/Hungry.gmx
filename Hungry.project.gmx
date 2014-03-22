@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_success</sound>
+    <sound>sound\snd_fail</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_friend</sprite>
     <sprite>sprites\spr_blockaide</sprite>
@@ -38,11 +41,16 @@
     </sprites>
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_aiming</sprite>
     <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_bed</sprite>
     <sprite>sprites\spr_sleepy</sprite>
     <sprite>sprites\spr_continue</sprite>
     <sprite>sprites\spr_action</sprite>
+    <sprite>sprites\spr_highlight</sprite>
+    <sprite>sprites\spr_zone</sprite>
+    <sprite>sprites\spr_rabbitL</sprite>
+    <sprite>sprites\spr_rabbitR</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -57,6 +65,7 @@
     <script>scripts\convo_leave.gml</script>
     <script>scripts\convo_return.gml</script>
     <script>scripts\convo_sleep.gml</script>
+    <script>scripts\btwn.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\gfont</font>
@@ -102,6 +111,9 @@
     <object>objects\obj_sleepResults</object>
     <object>objects\obj_continue</object>
     <object>objects\obj_action</object>
+    <object>objects\obj_zone</object>
+    <object>objects\obj_marker</object>
+    <object>objects\obj_aiming</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">

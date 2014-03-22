@@ -25,7 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point(mouse_x, mouse_y, 30);
+            <string>if (instance_exists(obj_aiming))
+{
+    randomGen=floor(59-global.width)/2;
+    diffX=irandom(randomGen);
+    diffY=irandom(randomGen);
+    diffXNeg=irandom(-randomGen);
+    diffYNeg=irandom(-randomGen);
+    choice=irandom(1);
+    if (choice==0)
+    move_towards_point(mouse_x+diffX, mouse_y+diffY, 30);
+    else 
+    if (choice==1)
+    move_towards_point(mouse_x+diffXNeg, mouse_y+diffYNeg, 30);
+    
+}
 </string>
           </argument>
         </arguments>
