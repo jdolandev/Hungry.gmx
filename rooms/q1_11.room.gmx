@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
-  <code>spawnx[0] = 2432;
+  <code>global.q1HasVisited = true;
+
+spawnx[0] = 2432;
 spawny[0] = 2080;
 
 spawnx[1] = 896;

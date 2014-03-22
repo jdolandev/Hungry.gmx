@@ -26,12 +26,29 @@
           <argument>
             <kind>1</kind>
             <string>image_alpha = 0;
+if((obj_timer.time &gt;= 4 ) &amp;&amp; (obj_timer.time &lt;= 5)){
+   image_alpha = 0.25;
+}
+
+if(( obj_timer.time &gt;= 6 ) &amp;&amp; (obj_timer.time &lt; 17)){
+    image_alpha = 0;
+}
+else if(( obj_timer.time &gt;= 17 ) &amp;&amp; (obj_timer.time &lt;= 21)){
+    image_alpha = 0.25;
+}
+else if(( (obj_timer.time &gt;= 21) &amp;&amp; (obj_timer.time &lt;= 24))){
+image_alpha = 0.5;
+
+}
+else{
+    image_alpha = 1;
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,8 +66,8 @@
           <argument>
             <kind>1</kind>
             <string>if( instance_exists( obj_focus )){
-    x = obj_focus.x;
-    y = obj_focus.y;
+    x = view_xview[0] + (sprite_width / 3);
+    y = view_yview[0] + (sprite_height / 3);
 }
 
 if((obj_timer.time &gt;= 4 ) &amp;&amp; (obj_timer.time &lt;= 5)){

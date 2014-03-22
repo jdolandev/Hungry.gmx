@@ -100,6 +100,9 @@ alive = true;
         alarm[0] = irandom_range(30,90)
     }
 }
+else{
+    speed = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -123,7 +126,15 @@ alive = true;
           <argument>
             <kind>1</kind>
             <string>calm = true;
+if(alive){
+    global.locker += 1;
+    global.q1 -= 1;
+}else{
+    speed = 0;
+}
+instance_create(x,y+32,obj_action);
 alive = false;
+
 </string>
           </argument>
         </arguments>

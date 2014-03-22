@@ -34,6 +34,9 @@
     <sprite>sprites\spr_tree</sprite>
     <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_bed</sprite>
+    <sprite>sprites\spr_sleepy</sprite>
+    <sprite>sprites\spr_continue</sprite>
+    <sprite>sprites\spr_action</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,6 +47,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\dist2d.gml</script>
+    <script>scripts\convo_kill.gml</script>
     <script>scripts\convo_leave.gml</script>
     <script>scripts\convo_return.gml</script>
     <script>scripts\convo_sleep.gml</script>
@@ -88,6 +92,10 @@
     <object>objects\obj_signDialogue</object>
     <object>objects\obj_bed</object>
     <object>objects\obj_beddialogue</object>
+    <object>objects\obj_sleepy</object>
+    <object>objects\obj_sleepResults</object>
+    <object>objects\obj_continue</object>
+    <object>objects\obj_action</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">
@@ -99,6 +107,8 @@
       <room>rooms\q1_11</room>
     </rooms>
     <room>rooms\rm_choice</room>
+    <room>rooms\rm_sleep</room>
+    <room>rooms\rm_q3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

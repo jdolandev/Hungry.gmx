@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( dist2d( obj_sign.x, obj_sign.y, obj_player.x, obj_player.y ) &lt; 64 ){
+            <string> if( dist2d( obj_sign.x, obj_sign.y, obj_player.x, obj_player.y ) &lt; 64 ){
     draw_set_color( c_green );
     draw_rectangle(obj_sign.x - 4, obj_sign.y - 24, obj_sign.x + 4, obj_sign.y - 16, false);
     convo_return();

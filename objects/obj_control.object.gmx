@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>globalvar status;
 
+global.q1HasVisited = false;
+global.q2HasVisited = false;
+global.q3HasVisited = false;
+global.q4HasVisited = false;
 global.q1 = 20
 global.q2 = 20
 global.q3 = 20
