@@ -127,12 +127,12 @@ else{
             <kind>1</kind>
             <string>calm = true;
 if(alive){
-    global.locker += 1;
     global.q1 -= 1;
+    instance_create(x,y-32,obj_action);
 }else{
     speed = 0;
 }
-instance_create(x,y+32,obj_action);
+
 alive = false;
 
 </string>
