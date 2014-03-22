@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_ambient</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_friend</sprite>
@@ -13,9 +15,16 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_yes</sprite>
     <sprite>sprites\spr_no</sprite>
+    <sprite>sprites\spr_quadrant</sprite>
+    <sprite>sprites\spr_home</sprite>
+    <sprite>sprites\spr_rabbit</sprite>
+    <sprite>sprites\spr_focus</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -35,10 +44,23 @@
       <object>objects\obj_tocabin</object>
     </objects>
     <object>objects\obj_friend</object>
-    <object>objects\obj_outside</object>
     <object>objects\obj_cursor</object>
-    <object>objects\obj_yes</object>
-    <object>objects\obj_no</object>
+    <objects name="quadrants">
+      <object>objects\obj_q1</object>
+      <object>objects\obj_q2</object>
+      <object>objects\obj_q3</object>
+      <object>objects\obj_q4</object>
+    </objects>
+    <objects name="dialogue">
+      <object>objects\obj_yes</object>
+      <object>objects\obj_no</object>
+      <object>objects\obj_outside</object>
+      <object>objects\obj_quadrant</object>
+    </objects>
+    <object>objects\obj_home</object>
+    <object>objects\obj_rabbit</object>
+    <object>objects\obj_focus</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">

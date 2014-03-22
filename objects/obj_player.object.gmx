@@ -31,6 +31,7 @@
 *   Written by Joe Dolan
 */
 
+playable = true;
 moveSpeed = 2.0;
 instance_create(0, 0, obj_cursor);
 </string>
@@ -64,6 +65,7 @@ k_down = ord('S');
 k_left = ord('A');
 k_right = ord('D');
 
+
 </string>
           </argument>
         </arguments>
@@ -86,21 +88,52 @@ k_right = ord('D');
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( keyboard_check( k_left )){
-    x -= moveSpeed;
+            <string>if( playable ){
+    visible = true;
+    if( keyboard_check( k_left )){
+        x -= moveSpeed;
+    }
+    else if( keyboard_check( k_right )){
+        x += moveSpeed;
+    }
+    if( keyboard_check( k_up )){
+        y -= moveSpeed;
+    }
+    else if( keyboard_check( k_down )){
+        y += moveSpeed;
+    }
 }
-else if( keyboard_check( k_right )){
-    x += moveSpeed;
-}
-if( keyboard_check( k_up )){
-    y -= moveSpeed;
-}
-else if( keyboard_check( k_down )){
-    y += moveSpeed;
+else{
+    visible = false;
 }
 
 if( keyboard_check_pressed( vk_escape )){
     game_end();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if( keyboard_check( vk_shift )){
+    if( mouse_check_button_pressed( mb_left )){
+        instance_create(x,y,obj_bullet);
+    }
 }
 </string>
           </argument>
@@ -173,7 +206,7 @@ room = rm_cabin;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = 240;
+            <string>x = 288;
 y = 224;
 room = rm_outside;
 </string>

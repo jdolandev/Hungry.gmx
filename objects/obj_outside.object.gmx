@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>cantalk = true;
-
+randomize();
+whichstring = irandom(2);
 pos = 0;
 </string>
           </argument>
