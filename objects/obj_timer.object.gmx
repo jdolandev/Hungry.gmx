@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time = 6.0;
-alarm[0] = room_speed;
+            <string>globalvar day;
+global.day = 1;
+time = 12.0;
+alarm[0] = room_speed / 30;
 </string>
           </argument>
         </arguments>
@@ -51,12 +53,13 @@ alarm[0] = room_speed;
             <kind>1</kind>
             <string>time += 0.01;
 if( time &gt;= 24){
+    global.day += 1;
     time = 0;
 }
 if( (time - floor(time)) &gt;= 0.60){
     time = ceil(time);
 }
-alarm[0] = room_speed;
+alarm[0] = room_speed / 30;
 </string>
           </argument>
         </arguments>
@@ -79,7 +82,13 @@ alarm[0] = room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font( gfont );
+            <string>if( room == rm_cabin ){
+    draw_set_color( c_white );
+}
+else{
+    draw_set_color( c_black );
+}
+draw_set_font( gfont );
 draw_text(view_xview[0] + view_wport[0] / 2, view_yview[0], obj_timer.time);
 </string>
           </argument>

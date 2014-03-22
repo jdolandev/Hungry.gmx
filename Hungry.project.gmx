@@ -32,6 +32,8 @@
     </sprites>
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_sign</sprite>
+    <sprite>sprites\spr_bed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -43,6 +45,8 @@
   <scripts name="scripts">
     <script>scripts\dist2d.gml</script>
     <script>scripts\convo_leave.gml</script>
+    <script>scripts\convo_return.gml</script>
+    <script>scripts\convo_sleep.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\gfont</font>
@@ -80,6 +84,10 @@
     <object>objects\obj_status</object>
     <object>objects\obj_control</object>
     <object>objects\obj_tree</object>
+    <object>objects\obj_sign</object>
+    <object>objects\obj_signDialogue</object>
+    <object>objects\obj_bed</object>
+    <object>objects\obj_beddialogue</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">
