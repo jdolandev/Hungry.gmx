@@ -31,11 +31,13 @@
       <sprite>sprites\spr_playerDR</sprite>
     </sprites>
     <sprite>sprites\spr_darkness</sprite>
+    <sprite>sprites\spr_tree</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -74,11 +76,16 @@
     <object>objects\obj_bullet</object>
     <object>objects\obj_darkness</object>
     <object>objects\obj_lighting</object>
+    <object>objects\obj_timer</object>
+    <object>objects\obj_status</object>
+    <object>objects\obj_control</object>
+    <object>objects\obj_tree</object>
   </objects>
   <rooms name="rooms">
     <rooms name="cabin">
       <room>rooms\rm_cabin</room>
       <room>rooms\rm_outside</room>
+      <room>rooms\rm_locker</room>
     </rooms>
     <rooms name="q1">
       <room>rooms\q1_11</room>
