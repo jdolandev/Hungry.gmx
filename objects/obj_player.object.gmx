@@ -31,6 +31,8 @@
 *   Written by Joe Dolan
 */
 
+image_speed = 0;
+
 playable = true;
 moveSpeed = 2.0;
 instance_create(0, 0, obj_cursor);
@@ -158,29 +160,117 @@ if( keyboard_check_pressed( vk_escape )){
             <string>if( keyboard_check( k_down )){
     if( !keyboard_check( k_left ) &amp;&amp; !keyboard_check( k_right )){
         sprite_index = spr_playerD;
+        image_speed = 0.25;
     }
     else if( keyboard_check( k_left )){
         sprite_index = spr_playerLD;
+        image_speed = 0.25;
     }
     else if( keyboard_check( k_right )){
         sprite_index = spr_playerDR;
     }
+    moving = true;
 }
 else if( !keyboard_check( k_down ) &amp;&amp; keyboard_check( k_left )){
     sprite_index = spr_playerL;
+    image_speed = 0.25;
+    moving = true;
 }
 else if( !keyboard_check( k_down ) &amp;&amp; keyboard_check( k_right )){
     sprite_index = spr_playerR;
+    image_speed = 0.25;
+    moving = true;
 }
 if( keyboard_check( k_up )){
     if( !keyboard_check( k_left ) &amp;&amp; !keyboard_check( k_right)){
         sprite_index = spr_playerU;
+        image_speed = 0.25;
     }
     else if( keyboard_check( k_left )){
         sprite_index = spr_playerUL;
+        image_speed = 0.25;
     }
-    else if( keyboard_check ( k_right )){
+    else if( keyboard_check( k_right )){
         sprite_index = spr_playerUR;
+        image_speed = 0.25;
+    }
+    moving = true;
+}
+//If you're not pressing any god damn keys
+if( !keyboard_check( k_up ) &amp;&amp; !keyboard_check( k_down ) &amp;&amp;
+    !keyboard_check( k_left) &amp;&amp; !keyboard_check( k_right )){
+    moving = false;    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if( !moving ){
+    if( sprite_index == spr_playerD ){
+        sprite_index = spr_playerSD;
+    }
+    else if( sprite_index == spr_playerLD ){
+        sprite_index = spr_playerSLD;
+    }
+    else if( sprite_index == spr_playerL ){
+        sprite_index = spr_playerSL;
+    }
+    else if( sprite_index == spr_playerUL ){
+        sprite_index = spr_playerSUL;
+    }
+    else if( sprite_index == spr_playerU ){
+        sprite_index = spr_playerSU;
+    }
+    else if( sprite_index == spr_playerUR ){
+        sprite_index = spr_playerSUR;
+    }
+    else if( sprite_index == spr_playerR ){
+        sprite_index = spr_playerSR;
+    }
+    else if( sprite_index == spr_playerDR ){
+        sprite_index = spr_playerSDR;
+    }
+}
+else{
+    if( sprite_index == spr_playerSD ){
+        sprite_index = spr_playerD;
+    }
+    else if( sprite_index == spr_playerSLD ){
+        sprite_index = spr_playerLD;
+    }
+    else if( sprite_index == spr_playerSL ){
+        sprite_index = spr_playerL;
+    }
+    else if( sprite_index == spr_playerSUL ){
+        sprite_index = spr_playerUL;
+    }
+    else if( sprite_index == spr_playerSU ){
+        sprite_index = spr_playerU;
+    }
+    else if( sprite_index == spr_playerSUR ){
+        sprite_index = spr_playerUR;
+    }
+    else if( sprite_index == spr_playerSR ){
+        sprite_index = spr_playerR;
+    }
+    else if( sprite_index == spr_playerSDR ){
+        sprite_index = spr_playerDR;
     }
 }
 </string>

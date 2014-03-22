@@ -56,7 +56,7 @@ if( time &gt;= 24){
     global.day += 1;
     time = 0;
 }
-if( (time - floor(time)) &gt;= 0.60){
+if( (time - floor(time)) &gt;= 0.59){
     time = ceil(time);
 }
 alarm[0] = room_speed / 3;

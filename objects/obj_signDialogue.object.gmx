@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>pos = 0;
+depth = -20;
 </string>
           </argument>
         </arguments>

@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\snd_ambient</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_friend</sprite>
     <sprite>sprites\spr_blockaide</sprite>
@@ -29,6 +27,14 @@
       <sprite>sprites\spr_playerUR</sprite>
       <sprite>sprites\spr_playerR</sprite>
       <sprite>sprites\spr_playerDR</sprite>
+      <sprite>sprites\spr_playerSD</sprite>
+      <sprite>sprites\spr_playerSLD</sprite>
+      <sprite>sprites\spr_playerSL</sprite>
+      <sprite>sprites\spr_playerSUL</sprite>
+      <sprite>sprites\spr_playerSU</sprite>
+      <sprite>sprites\spr_playerSUR</sprite>
+      <sprite>sprites\spr_playerSR</sprite>
+      <sprite>sprites\spr_playerSDR</sprite>
     </sprites>
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_tree</sprite>
