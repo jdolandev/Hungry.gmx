@@ -55,7 +55,14 @@ alarm[0] = room_speed / 3;
 if( time &gt;= 24){
     global.day += 1;
     time = 0;
+    //make sound to scare player
 }
+
+if ( time == 2)
+{
+    //make an object to kick the player out
+}
+
 if( (time - floor(time)) &gt;= 0.59){
     time = ceil(time);
 }

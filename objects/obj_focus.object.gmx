@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_player.x;
-y = obj_player.y;
+            <string>x = obj_player.x + 8;
+y = obj_player.y + 8;
 </string>
           </argument>
         </arguments>

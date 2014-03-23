@@ -25,8 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.status = (((global.rpq + global.locker)/2)/3)
-global.rpq = (global.q1 + global.q2 + global.q3 + global.q4)/4
+            <string>if (((global.rpq + global.locker)/2)/3)&lt;=10 and (((global.rpq + global.locker)/2)/3) &gt; 1
+{
+    global.rpq = (global.q1 + global.q2 + global.q3 + global.q4)/4
+    global.status = (((global.rpq + global.locker)/2)/3)
+}
+else if (((global.rpq + global.locker)/2)/3) &gt; 10
+{
+    global.rpq = (global.q1 + global.q2 + global.q3 + global.q4)/4
+    global.status = 10
+}
+else
+{
+    global.rpq = (global.q1 + global.q2 + global.q3 + global.q4)/4
+    global.status = 1;
+}
 </string>
           </argument>
         </arguments>

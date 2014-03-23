@@ -39,6 +39,8 @@ global.rpq = 20
 global.locker = 40
 global.hunger = 20
 global.hasEaten = false;
+global.gonnaDie = false;
+global.pounds = 0;
 </string>
           </argument>
         </arguments>

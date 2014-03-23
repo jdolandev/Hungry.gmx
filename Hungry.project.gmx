@@ -138,6 +138,13 @@
     <sound>sound\sound9_Meat_Fuckboy</sound>
     <sound>sound\sound10_Tiger</sound>
     <sound>sound\sound11_Wind</sound>
+    <sounds name="Songs">
+      <sound>sound\mood1</sound>
+      <sound>sound\mood3</sound>
+      <sound>sound\first_level</sound>
+      <sound>sound\mood2</sound>
+      <sound>sound\mood2_begin</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_friend</sprite>
@@ -153,6 +160,21 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\sprite12</sprite>
     <sprites name="player">
+      <sprites name="Murderer">
+        <sprite>sprites\spr_playerKill</sprite>
+        <sprite>sprites\spr_playerStab</sprite>
+        <sprite>sprites\spr_killEnd</sprite>
+      </sprites>
+      <sprites name="Gun_Aim">
+        <sprite>sprites\spr_playerGDR</sprite>
+        <sprite>sprites\spr_playerGUL</sprite>
+        <sprite>sprites\spr_playerGDL</sprite>
+        <sprite>sprites\spr_playerGUR</sprite>
+        <sprite>sprites\spr_playerGU</sprite>
+        <sprite>sprites\spr_playerGD</sprite>
+        <sprite>sprites\spr_playerGR</sprite>
+        <sprite>sprites\spr_playerGL</sprite>
+      </sprites>
       <sprite>sprites\spr_playerD</sprite>
       <sprite>sprites\spr_playerLD</sprite>
       <sprite>sprites\spr_playerL</sprite>
@@ -182,8 +204,7 @@
     <sprite>sprites\spr_zone</sprite>
     <sprite>sprites\spr_rabbitL</sprite>
     <sprite>sprites\spr_rabbitR</sprite>
-    <sprite>sprites\spr_playerKill</sprite>
-    <sprite>sprites\spr_playerStab</sprite>
+    <sprite>sprites\spr_rock</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -193,11 +214,17 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="IntroStuff">
+      <script>scripts\intro_convo.gml</script>
+    </scripts>
     <script>scripts\dist2d.gml</script>
-    <script>scripts\convo_kill.gml</script>
-    <script>scripts\convo_leave.gml</script>
-    <script>scripts\convo_return.gml</script>
-    <script>scripts\convo_sleep.gml</script>
+    <scripts name="Conversations">
+      <script>scripts\convo_leave.gml</script>
+      <script>scripts\convo_kill.gml</script>
+      <script>scripts\convo_return.gml</script>
+      <script>scripts\convo_sleep.gml</script>
+      <script>scripts\convo_night.gml</script>
+    </scripts>
     <script>scripts\btwn.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -206,7 +233,17 @@
   <objects name="objects">
     <object>objects\obj_blockaide</object>
     <objects name="Environmental">
-      <object>objects\object43</object>
+      <objects name="Effects">
+        <object>objects\obj_musicChoice</object>
+        <object>objects\obj_wind</object>
+        <object>objects\obj_darkness</object>
+        <object>objects\obj_lighting</object>
+      </objects>
+      <objects name="Visuals">
+        <object>objects\obj_tree</object>
+        <object>objects\obj_sign</object>
+        <object>objects\obj_rock</object>
+      </objects>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
@@ -216,6 +253,7 @@
       <object>objects\obj_locker</object>
       <object>objects\obj_tocabin</object>
     </objects>
+    <object>objects\obj_titleReader</object>
     <object>objects\obj_friend</object>
     <object>objects\obj_cursor</object>
     <objects name="quadrants">
@@ -226,47 +264,53 @@
     </objects>
     <objects name="dialogue">
       <object>objects\obj_no</object>
+      <object>objects\obj_beddialogue</object>
       <object>objects\obj_outside</object>
+      <object>objects\obj_signDialogue</object>
       <object>objects\obj_quadrant</object>
       <object>objects\obj_yes</object>
+      <object>objects\obj_lockertext</object>
     </objects>
     <object>objects\obj_home</object>
     <object>objects\obj_rabbit</object>
     <object>objects\obj_focus</object>
     <object>objects\obj_bullet</object>
-    <object>objects\obj_darkness</object>
-    <object>objects\obj_lighting</object>
     <object>objects\obj_timer</object>
     <object>objects\obj_status</object>
     <object>objects\obj_control</object>
-    <object>objects\obj_tree</object>
-    <object>objects\obj_sign</object>
-    <object>objects\obj_signDialogue</object>
+    <objects name="Skinning">
+      <object>objects\obj_zone</object>
+      <object>objects\obj_action</object>
+    </objects>
     <object>objects\obj_bed</object>
-    <object>objects\obj_beddialogue</object>
     <object>objects\obj_sleepy</object>
     <object>objects\obj_sleepResults</object>
     <object>objects\obj_continue</object>
-    <object>objects\obj_action</object>
-    <object>objects\obj_zone</object>
     <object>objects\obj_marker</object>
     <object>objects\obj_aiming</object>
-    <object>objects\obj_lockertext</object>
     <object>objects\object41</object>
     <object>objects\obj_meatToEat</object>
   </objects>
   <rooms name="rooms">
+    <rooms name="Introduction">
+      <room>rooms\title_screen</room>
+      <room>rooms\rm_introRoom</room>
+    </rooms>
     <rooms name="cabin">
       <room>rooms\rm_cabin</room>
+      <room>rooms\room11</room>
       <room>rooms\rm_outside</room>
       <room>rooms\rm_locker</room>
     </rooms>
-    <rooms name="q1">
+    <rooms name="huntingQs">
       <room>rooms\q1_11</room>
+      <room>rooms\rm_q4</room>
+      <room>rooms\rm_q3</room>
+      <room>rooms\rm_q2</room>
     </rooms>
     <room>rooms\rm_choice</room>
     <room>rooms\rm_sleep</room>
-    <room>rooms\rm_q3</room>
+    <room>rooms\rm_dead</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

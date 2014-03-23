@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pounds = 1
+            <string>global.pounds = 0
 </string>
           </argument>
         </arguments>
@@ -50,23 +50,22 @@
             <kind>1</kind>
             <string>if keyboard_check_pressed(ord('W')) or keyboard_check_pressed(ord('D'))
 {
-    if pounds &lt; 6
+    if global.pounds &lt; 6
     {
-        pounds += 1
+        global.pounds += 1
     }
 }
 if keyboard_check_pressed(ord('S')) or keyboard_check_pressed(ord('A'))
 {
-    if pounds &gt; 0
+    if global.pounds &gt; 0
     {
-        pounds -= 1
+        global.pounds -= 1
     }
 }
 
 if keyboard_check_pressed(vk_enter)
 {
-    global.locker -= pounds;
-    global.hunger += pounds;
+    global.locker -= global.pounds;
     if(global.hunger &gt; 20){
         global.hunger = 20;
     }
@@ -96,7 +95,7 @@ if keyboard_check_pressed(vk_enter)
             <kind>1</kind>
             <string>if global.eat == true
 {
-    draw_text(32,200,string(pounds))
+    draw_text(32,200,string(global.pounds))
 }
 </string>
           </argument>

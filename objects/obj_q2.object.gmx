@@ -95,7 +95,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room = rm_q3;
+            <string>room = rm_q2;
 obj_timer.time += 0.15;
 </string>
           </argument>

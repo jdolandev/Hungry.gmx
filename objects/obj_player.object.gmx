@@ -163,11 +163,31 @@ if( keyboard_check_pressed( vk_escape )){
     if( !instance_exists(obj_aiming)){
         instance_create(x+12,y+12,obj_aiming)
     }
-    if(mouse_x &lt; x + sprite_width/2){
-        sprite_index = spr_playerL;
-    } else{
-        sprite_index = spr_playerR;
+    if(mouse_x &lt; x &amp;&amp; mouse_y &gt; y &amp;&amp; mouse_y &lt; y + sprite_height ){
+        sprite_index = spr_playerGL;
+    } 
+    if(mouse_x &gt;= x + sprite_width &amp;&amp; mouse_y &gt; y &amp;&amp; mouse_y &lt; y + sprite_height ){
+        sprite_index = spr_playerGR;
     }
+    if(mouse_x &gt;= x + sprite_width &amp;&amp; mouse_y &lt;= y  ){
+        sprite_index = spr_playerGUR;
+    }
+    if(mouse_x &gt;= x + sprite_width &amp;&amp; mouse_y &gt;= y + sprite_height ){
+        sprite_index = spr_playerGDR;
+    }
+    if(mouse_x &lt;= x &amp;&amp; mouse_y &lt;= y ){
+        sprite_index = spr_playerGUL;
+    }
+    if(mouse_x &lt;= x &amp;&amp; mouse_y &gt;= y + sprite_height ){
+        sprite_index = spr_playerGDL;
+    }
+    if(mouse_x &gt;= x &amp;&amp; mouse_x &lt;= x + sprite_width &amp;&amp; mouse_y &lt; y + sprite_height/2){
+        sprite_index = spr_playerGU;
+    }
+    if(mouse_x &gt;= x &amp;&amp; mouse_x &lt;= x + sprite_width &amp;&amp; mouse_y &gt; y + sprite_height/2){
+        sprite_index = spr_playerGD;
+    }
+    
     sound_play(sound5_Breathing);
 } 
 else if (keyboard_check_released( vk_shift ))
@@ -582,6 +602,9 @@ y += 0;
             <kind>1</kind>
             <string>if( sprite_index == spr_playerStab ){
     sprite_index = spr_playerKill;
+}
+else if( sprite_index == spr_killEnd ){
+    sprite_index = spr_playerD;
 }
 if (!sound_isplaying(sound7_Feet_in_Snow) &amp;&amp; moving)
 {

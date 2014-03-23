@@ -123,13 +123,18 @@ depth = -20;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with( obj_outside ){
+            <string>if room==rm_locker
+{
+    
+}
+with( obj_outside ){
     instance_destroy();
 }
 with( obj_yes ){
     instance_destroy();
 }
 instance_destroy();
+
 </string>
           </argument>
         </arguments>

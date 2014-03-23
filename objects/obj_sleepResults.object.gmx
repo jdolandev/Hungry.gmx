@@ -39,6 +39,12 @@ if(!global.q4HasVisited){
 global.q4 += ceil(global.q4/10);
 }
 global.hasEaten = false;
+global.hunger += global.pounds - 4;
+if(global.hunger &lt;= 0){
+    global.gonnaDie = true;
+}
+
+global.pounds = 0;
 </string>
           </argument>
         </arguments>

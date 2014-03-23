@@ -122,16 +122,18 @@ depth = -20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room != rm_locker
+            <string>if room == rm_outside
 {
     room = rm_choice;
 }
-
-if( room == rm_locker ){
+else if( room == rm_locker ){
     if( !instance_exists( obj_meatToEat)){
         instance_create(32,128, obj_meatToEat);
     }
     global.eat = true
+} else
+{
+    room = rm_outside;
 }
 </string>
           </argument>

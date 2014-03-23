@@ -57,6 +57,11 @@ if global.eat == true
     draw_text(32,150,"How much?")
     draw_text(32,225,"Press Enter")
 }
+else
+if (mouse_check_button_pressed(2))
+{
+    room=rm_outside;
+}
 </string>
           </argument>
         </arguments>
