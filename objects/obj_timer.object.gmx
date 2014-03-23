@@ -56,11 +56,21 @@ if( time &gt;= 24){
     global.day += 1;
     time = 0;
     //make sound to scare player
+    randomize();
+    chance= irandom(3);
+    if (chance==2)
+    {   
+        sound_play(sound10_Tiger);
+    }
+
 }
 
-if ( time == 2)
+if ( time &gt; 2 and time &lt;3 and global.canHunt==true)
 {
     //make an object to kick the player out
+    global.canHunt=false;
+    //say I better get home or something similar
+    room = rm_cabin;
 }
 
 if( (time - floor(time)) &gt;= 0.59){

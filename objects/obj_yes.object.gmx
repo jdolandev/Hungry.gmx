@@ -134,6 +134,7 @@ else if( room == rm_locker ){
 } else
 {
     room = rm_outside;
+    global.canHunt=false;
 }
 </string>
           </argument>

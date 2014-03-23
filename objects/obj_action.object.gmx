@@ -128,6 +128,7 @@ fuckupsallowed=3;
         if (hits&gt;=hitsNeeded)
         {
             global.locker += 1;
+            global.gains += 1;
             hasKilled=true;
             global.meatGained= global.meatGained+1;
             with( obj_zone ){

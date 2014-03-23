@@ -40,7 +40,9 @@ global.locker = 40
 global.hunger = 20
 global.hasEaten = false;
 global.gonnaDie = false;
+global.canHunt = true;
 global.pounds = 0;
+global.gains = 0;
 </string>
           </argument>
         </arguments>

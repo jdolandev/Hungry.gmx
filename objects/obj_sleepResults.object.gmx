@@ -70,6 +70,7 @@ global.pounds = 0;
             <string>draw_set_color( c_white );
 daystr = "Day: " + string(global.day - 1);
 foodstr = "Food: " + string(global.locker) + " lbs";
+gainstr = "Gain/Loss: " +string(global.gains-global.pounds) + " lbs";
 statusstr = "Health: " + string(global.status) + "/10";
 hungerstr = "Well Fed: " + string(global.hunger) + "/20";
 
@@ -78,7 +79,9 @@ draw_text( room_width / 2, 54, "Results:");
 
 draw_text( 64, 90, statusstr);
 draw_text( 64, 128, foodstr);
+draw_text( 64, 144, gainstr);
 draw_text( 64, 144, hungerstr);
+global.gains = 0;
 </string>
           </argument>
         </arguments>

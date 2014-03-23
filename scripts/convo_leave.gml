@@ -30,8 +30,6 @@ str[0,0] = "Save yourself...";
 str[0,1] = "......";
 str[0,2] = "......";
 
-whichstring=irandom(2);
-
 level=ceil(global.status-1);
 
 cstr = string_copy(str[level,whichstring], 1, pos);

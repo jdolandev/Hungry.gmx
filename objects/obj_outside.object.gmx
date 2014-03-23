@@ -60,8 +60,12 @@ else{
     cantalk = false;
 }
 
-if( cantalk ){
+if( cantalk and global.canHunt){
     convo_leave();
+}
+else 
+if( cantalk and !global.canHunt){
+    convo_night();
 }
 else{
     if( instance_exists( obj_yes )){

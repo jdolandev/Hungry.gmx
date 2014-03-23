@@ -126,7 +126,9 @@
   </datafiles>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\snd_scare</sound>
     <sound>sound\snd_success</sound>
+    <sound>sound\snd_rabbit</sound>
     <sound>sound\snd_fail</sound>
     <sound>sound\sound2_snd_ambient</sound>
     <sound>sound\sound3_snd_ambient</sound>
@@ -295,6 +297,7 @@
     <rooms name="Introduction">
       <room>rooms\title_screen</room>
       <room>rooms\rm_introRoom</room>
+      <room>rooms\rm_introFight</room>
     </rooms>
     <rooms name="cabin">
       <room>rooms\rm_cabin</room>
