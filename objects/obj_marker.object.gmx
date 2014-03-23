@@ -76,10 +76,14 @@ x += changex;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( keyboard_check_pressed( ord('E'))){
+            <string>obj_player.image_speed = 1;
+
+if( keyboard_check_pressed( ord('E'))){
     if( btwn(obj_zone.x + 54, obj_zone.x + 74, x)){
         obj_action.hits++;
         sound_play( snd_success );
+        obj_player.image_speed = .125;
+        obj_player.sprite_index = spr_playerStab;
     }
     else{
         sound_play( snd_fail );

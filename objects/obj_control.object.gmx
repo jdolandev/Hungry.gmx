@@ -38,6 +38,7 @@ global.q4 = 20
 global.rpq = 20
 global.locker = 40
 global.hunger = 20
+global.hasEaten = false;
 </string>
           </argument>
         </arguments>

@@ -38,6 +38,7 @@ global.q3 += ceil(global.q3/10);
 if(!global.q4HasVisited){
 global.q4 += ceil(global.q4/10);
 }
+global.hasEaten = false;
 </string>
           </argument>
         </arguments>
@@ -64,11 +65,14 @@ global.q4 += ceil(global.q4/10);
 daystr = "Day: " + string(global.day - 1);
 foodstr = "Food: " + string(global.locker) + " lbs";
 statusstr = "Health: " + string(global.status) + "/10";
+hungerstr = "Well Fed: " + string(global.hunger) + "/20";
+
 draw_text( room_width / 2, 32, daystr);
 draw_text( room_width / 2, 54, "Results:");
 
 draw_text( 64, 90, statusstr);
 draw_text( 64, 128, foodstr);
+draw_text( 64, 144, hungerstr);
 </string>
           </argument>
         </arguments>

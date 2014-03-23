@@ -3,10 +3,141 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="7" name="datafiles">
+    <datafile>
+      <name>Gunshot.aif</name>
+      <exists>-1</exists>
+      <size>635208</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Gunshot.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Meat Fuckboy.aif</name>
+      <exists>-1</exists>
+      <size>306852</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Meat Fuckboy.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Tiger.aif</name>
+      <exists>-1</exists>
+      <size>3096470</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Tiger.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Wind.aif</name>
+      <exists>-1</exists>
+      <size>11246070</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Wind.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Breathing.aif</name>
+      <exists>-1</exists>
+      <size>1473914</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Breathing.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Door_ MeatLocker.aif</name>
+      <exists>-1</exists>
+      <size>1257420</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Door_ MeatLocker.aif</filename>
+    </datafile>
+    <datafile>
+      <name>Feet in Snow.aif</name>
+      <exists>-1</exists>
+      <size>2475010</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Feet in Snow.aif</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_success</sound>
     <sound>sound\snd_fail</sound>
+    <sound>sound\sound2_snd_ambient</sound>
+    <sound>sound\sound3_snd_ambient</sound>
+    <sound>sound\sound4_another_ambient_song_001</sound>
+    <sound>sound\sound5_Breathing</sound>
+    <sound>sound\sound6_Door__MeatLocker</sound>
+    <sound>sound\sound7_Feet_in_Snow</sound>
+    <sound>sound\sound8_Gunshot</sound>
+    <sound>sound\sound9_Meat_Fuckboy</sound>
+    <sound>sound\sound10_Tiger</sound>
+    <sound>sound\sound11_Wind</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_friend</sprite>
@@ -51,6 +182,8 @@
     <sprite>sprites\spr_zone</sprite>
     <sprite>sprites\spr_rabbitL</sprite>
     <sprite>sprites\spr_rabbitR</sprite>
+    <sprite>sprites\spr_playerKill</sprite>
+    <sprite>sprites\spr_playerStab</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -72,6 +205,9 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_blockaide</object>
+    <objects name="Environmental">
+      <object>objects\object43</object>
+    </objects>
     <objects name="player">
       <object>objects\obj_player</object>
     </objects>

@@ -39,6 +39,8 @@
     if (choice==1)
     move_towards_point(mouse_x+diffXNeg, mouse_y+diffYNeg, 30);
     
+    sound_play(sound8_Gunshot);
+    
 }
 </string>
           </argument>

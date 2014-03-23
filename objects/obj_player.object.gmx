@@ -33,10 +33,14 @@
 
 image_speed = 0;
 
+soundPlaying=false;
+soundstops=0;
+soundplays=0;
 playable = true;
 player_move = true;
 moveSpeed = 2.0;
 moving = false;
+movingS=false;
 instance_create(0, 0, obj_cursor);
 </string>
           </argument>
@@ -96,17 +100,22 @@ k_right = ord('D');
     visible = true;
     if (player_move)
     {
+        moving=false;
         if( keyboard_check( k_left )){
             x -= moveSpeed;
+            moving=true;
         }
         else if( keyboard_check( k_right )){
             x += moveSpeed;
+            moving=true;
         }
         if( keyboard_check( k_up )){
             y -= moveSpeed;
+            moving=true;
         }
         else if( keyboard_check( k_down )){
             y += moveSpeed;
+            moving=true;
         }
     }
 }
@@ -114,6 +123,18 @@ else{
     visible = false;
 }
 
+/*if (image_index &gt; 0)
+{
+    if( !sound_isplaying(sound7_Feet_in_Snow)){
+        sound_play(sound7_Feet_in_Snow);
+        soundplays=soundplays+1;
+    }
+}
+else
+{
+    sound_stop(sound7_Feet_in_Snow);
+    soundstops=soundstops+1;
+}*/
 if( keyboard_check_pressed( vk_escape )){
     game_end();
 }
@@ -142,6 +163,12 @@ if( keyboard_check_pressed( vk_escape )){
     if( !instance_exists(obj_aiming)){
         instance_create(x+12,y+12,obj_aiming)
     }
+    if(mouse_x &lt; x + sprite_width/2){
+        sprite_index = spr_playerL;
+    } else{
+        sprite_index = spr_playerR;
+    }
+    sound_play(sound5_Breathing);
 } 
 else if (keyboard_check_released( vk_shift ))
 {
@@ -152,7 +179,7 @@ else if (keyboard_check_released( vk_shift ))
             instance_destroy();
         }
     }
-    
+    sound_stop(sound5_Breathing);
     player_move=true;   
 }
 </string>
@@ -175,7 +202,16 @@ else if (keyboard_check_released( vk_shift ))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( keyboard_check( k_down )){
+            <string>/*
+*   Keyboard function script
+*
+*/
+
+if( image_index == spr_playerKill || image_index == spr_playerStab){
+    image_speed = 0.25;
+}
+
+if( keyboard_check( k_down )){
     if( !keyboard_check( k_left ) &amp;&amp; !keyboard_check( k_right )){
         sprite_index = spr_playerD;
         
@@ -223,8 +259,7 @@ if( keyboard_check( k_up )){
     }
     else if( keyboard_check( k_left )){
         sprite_index = spr_playerUL;
-        if (keyboard_check(vk_lshift))
-        {
+        if (keyboard_check(vk_lshift)){
             image_speed = 0;
         }
     }
@@ -241,7 +276,10 @@ if( keyboard_check( k_up )){
 if( moving ){
     image_speed = 0.25;
 }
-else if( !moving ){
+else if( !moving  &amp;&amp; (!sprite_index == spr_playerKill || !sprite_index == spr_playerStab) ){
+    if( sound_isplaying( sound7_Feet_in_Snow )){
+        sound_stop( sound7_Feet_in_Snow );
+    }
     image_speed = 0;
     image_index = 0;
 }
@@ -322,31 +360,6 @@ else{
         sprite_index = spr_playerDR;
     }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_locker">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>x = 240;
-y = 320;
-room = rm_locker;
 </string>
           </argument>
         </arguments>
@@ -473,6 +486,34 @@ room = rm_cabin;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_locker">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!global.hasEaten){
+    x = 240;
+    y = 320;
+    room = rm_locker;
+    global.hasEaten = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_leaveRoom">
       <action>
         <libid>1</libid>
@@ -517,6 +558,39 @@ room = rm_outside;
             <kind>1</kind>
             <string>x += 0;
 y += 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if( sprite_index == spr_playerStab ){
+    sprite_index = spr_playerKill;
+}
+if (!sound_isplaying(sound7_Feet_in_Snow) &amp;&amp; moving)
+{
+sound_play(sound7_Feet_in_Snow);
+}
+else
+{
+sound_stop(sound7_Feet_in_Snow);
+}
 </string>
           </argument>
         </arguments>

@@ -65,8 +65,11 @@ if keyboard_check_pressed(ord('S')) or keyboard_check_pressed(ord('A'))
 
 if keyboard_check_pressed(vk_enter)
 {
-    global.locker -= pounds
-    global.hunger -= pounds
+    global.locker -= pounds;
+    global.hunger += pounds;
+    if(global.hunger &gt; 20){
+        global.hunger = 20;
+    }
     room_goto(rm_outside)
 }
 </string>
