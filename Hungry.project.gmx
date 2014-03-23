@@ -158,7 +158,9 @@
     <sprite>sprites\spr_quadrant</sprite>
     <sprite>sprites\spr_home</sprite>
     <sprite>sprites\spr_rabbit</sprite>
+    <sprite>sprites\sprite52</sprite>
     <sprite>sprites\spr_focus</sprite>
+    <sprite>sprites\spr_tree1</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\sprite12</sprite>
     <sprites name="player">
@@ -210,6 +212,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\tileset</background>
     <background>background\background1</background>
     <background>background\background2</background>
     <background>background\background3</background>
@@ -294,11 +297,6 @@
     <object>objects\obj_meatToEat</object>
   </objects>
   <rooms name="rooms">
-    <rooms name="Introduction">
-      <room>rooms\title_screen</room>
-      <room>rooms\rm_introRoom</room>
-      <room>rooms\rm_introFight</room>
-    </rooms>
     <rooms name="cabin">
       <room>rooms\rm_cabin</room>
       <room>rooms\room11</room>
@@ -313,6 +311,11 @@
     </rooms>
     <room>rooms\rm_choice</room>
     <room>rooms\rm_sleep</room>
+    <rooms name="Introduction">
+      <room>rooms\title_screen</room>
+      <room>rooms\rm_introRoom</room>
+      <room>rooms\rm_introFight</room>
+    </rooms>
     <room>rooms\rm_dead</room>
   </rooms>
   <help>
