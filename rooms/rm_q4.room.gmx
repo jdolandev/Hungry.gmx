@@ -105,7 +105,7 @@ obj_player.image_speed = 0;</code>
     <instance objName="obj_rock" x="1136" y="3216" name="inst_6CE15EBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="1296" y="3296" name="inst_1539D28F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="4944" y="1264" name="inst_40EF0E4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock" x="4672" y="672" name="inst_453F7780" locked="0" code="" scaleX="7.75" scaleY="20.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_signDialogue" x="80" y="32" name="inst_CCBFCF17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="4320" y="2144" name="inst_CDBBC8ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="4624" y="4192" name="inst_93A6FA79" locked="0" code="" scaleX="9" scaleY="17.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_tree" x="2352" y="1648" name="inst_129142A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -125,7 +125,6 @@ obj_player.image_speed = 0;</code>
     <instance objName="obj_wind" x="32" y="32" name="inst_5FC8F561" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_musicChoice" x="48" y="32" name="inst_00332D54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lighting" x="64" y="32" name="inst_457DB851" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_signDialogue" x="80" y="32" name="inst_CCBFCF17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="144" y="1536" w="16" h="16" xo="0" yo="16" id="10006791" name="inst_E17AE138" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -125,7 +125,7 @@ depth = -20;
             <kind>1</kind>
             <string>if room==rm_locker
 {
-    
+    room_goto(rm_outside)
 }
 with( obj_outside ){
     instance_destroy();
