@@ -758,6 +758,8 @@ obj_player.image_speed = 0;</code>
     <instance objName="obj_blockaide" x="3904" y="2336" name="inst_C609B3B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sign" x="4768" y="4224" name="inst_E51F10B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_signDialogue" x="16" y="0" name="inst_F9C913F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockaide" x="0" y="0" name="inst_B0D3E8D9" locked="0" code="" scaleX="1" scaleY="300" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blockaide" x="5104" y="0" name="inst_128DE897" locked="0" code="" scaleX="1" scaleY="300" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="2160" y="1664" w="16" h="16" xo="0" yo="16" id="10001380" name="inst_3A6A0038" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

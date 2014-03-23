@@ -25,19 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.day += 1;
-if(!global.q1HasVisited){
-global.q1 += ceil(global.q1/10);
-}
-if(!global.q2HasVisited){
-global.q2 += ceil(global.q2/10);
-}
-if(!global.q3HasVisited){
-global.q3 += ceil(global.q3/10);
-}
-if(!global.q4HasVisited){
-global.q4 += ceil(global.q4/10);
-}
+            <string>global.eat = false
+instance_create(32,125,obj_yes)
+instance_create(64,125,obj_no)
 </string>
           </argument>
         </arguments>
@@ -60,15 +50,13 @@ global.q4 += ceil(global.q4/10);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color( c_white );
-daystr = "Day: " + string(global.day - 1);
-foodstr = "Food: " + string(global.locker) + " lbs";
-statusstr = "Health: " + string(global.status) + "/10";
-draw_text( room_width / 2, 32, daystr);
-draw_text( room_width / 2, 54, "Results:");
-
-draw_text( 64, 90, statusstr);
-draw_text( 64, 128, foodstr);
+            <string>draw_set_font(gfont)
+draw_text(32,100,"Do you want to eat?")
+if global.eat == true
+{
+    draw_text(32,150,"How much?")
+    draw_text(32,225,"Press Enter")
+}
 </string>
           </argument>
         </arguments>
